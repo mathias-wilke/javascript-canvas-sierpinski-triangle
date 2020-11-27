@@ -1,5 +1,14 @@
-# javascript-canvas-fun
-All you need to calculate things and draw them on an HTML canvas element.
+# Sierpiński Triangle
+The Sierpiński triangle is a fractal attractive fixed set with the overall shape of an equilateral triangle, subdivided recursively into smaller equilateral triangles.
+
+## Examples 
+
+Here are some sample outputs
+
+![Example1](examples/example1.PNG?raw=true)
+![Example2](examples/example2.PNG?raw=true)
+![Example3](examples/example3.PNG?raw=true)
+![Example4](examples/example4.PNG?raw=true)
 
 ## Lizenz
 
