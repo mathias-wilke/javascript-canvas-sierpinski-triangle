@@ -17,7 +17,8 @@ function draw(){
     ctx.font = "10px Arial";
     ctx.fillText("Depth: " + recursion, 0, 40); 
     ctx.fillText("Width: " + width, 0, 50); 
-    
+    ctx.fillText("https://github.com/mathias-wilke/javascript-canvas-sierpinski-triangle.git", 0, canvas.height - 4); 
+
     ctx.translate((canvas.width / 2) - width / 2, canvas.height / 2);
     var h = Math.tan(60 * (Math.PI / 180)) * width/2;
     var x = Math.sqrt(Math.pow(width,2) - Math.pow(h,2));
@@ -48,8 +49,8 @@ function drawTriangle(j,width){
     ctx.lineTo(width/2,h);
     ctx.closePath();
 
-    var colored = document.getElementById("colors").value;
-    var filled = document.getElementById("fill").value;
+    var colored = document.getElementById("colors").checked;
+    var filled = document.getElementById("fill").checked;
 
     if(colored == 1){
         var gradient = ctx.createLinearGradient(0, 0, 800, 800);
@@ -103,8 +104,7 @@ function clear(){
 //if the user changes the size of the window we have do recalculate
 function resizeCanvas(){
     canvas.width = window.innerWidth - 20;
-    //let us keep this sixteen by nine
-    canvas.height = ((window.innerWidth) / 16) * 9;
+    canvas.height = window.innerHeight -20;
 }
 
 //let us call the function once at the start to get the user's canvas size
